@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+
+    <!-- Enable features -->
+    <featureManager>
+        <feature>webProfile-7.0</feature>
+        <feature>adminCenter-1.0</feature>
+    </featureManager>
+
+    <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="29082"
+                  httpsPort="29445" />
+                  
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true"/>
+
+    <basicRegistry realm="basicRealm">
+      <user name="管理者" password="password" />
+      <user name="⺌童༘༙€㐎d㐏ᠧᠨᠩꀏحخد郂㘎€b㐅㐆ᠤꀍ༖瞳༗بةتثخد郂㊣€㐋ᠧᠨᠩ༘༙بةتثجحد铜郂" password="password" />
+      <user name="utle" password="utle" />
+    </basicRegistry>
+
+    <administrator-role>
+      <!-- -->
+      <user>管理者</user>
+      <user>⺌童༘༙€㐎d㐏ᠧᠨᠩꀏحخد郂㘎€b㐅㐆ᠤꀍ༖瞳༗بةتثخد郂㊣€㐋ᠧᠨᠩ༘༙بةتثجحد铜郂</user>
+      <!---->
+      <user>utle</user>
+    </administrator-role>
+    
+</server>
