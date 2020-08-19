@@ -1,11 +1,19 @@
-How to set up DBCS userid for Liberty
+# Sample Liberty server that use DBCS userid for admincenter
 
-
+## Creating Liberty image that has adminconsole configuration with users
+```
 $ docker build -t dbcs . 
 $ docker run -it -p 29082:29082 -p 29445:29445 dbcs
+```
+## Inside the container
 
+### Run the server
+
+```
 root@418e62b127b5:/opt/ibm/wlp/bin# ./server run defaultServer
-
+```
+Server startup..
+```
 Launching defaultServer (WebSphere Application Server 20.0.0.8/wlp-1.0.43.cl200820200721-1900) on IBM J9 VM, version 8.0.6.15 - pxa6480sr6fp15-20200724_01(SR6 FP15) (en_US)
 [AUDIT   ] CWWKE0001I: The server defaultServer has been launched.
 [AUDIT   ] CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/20.0.0.8/lafiles/en.html
@@ -21,11 +29,19 @@ Launching defaultServer (WebSphere Application Server 20.0.0.8/wlp-1.0.43.cl2008
 [AUDIT   ] CWWKT0016I: Web application available (default_host): http://localhost:29082/ibm/adminCenter/explore-1.0/
 [AUDIT   ] CWWKT0016I: Web application available (default_host): http://localhost:29082/ibm/adminCenter/serverConfig-1.0/
 [AUDIT   ] CWWKT0016I: Web application available (default_host): http://localhost:29082/adminCenter/
+```
+### Login to the server
 
-point the broser to http://localhost:29082/adminCenter/
+Once the server started, in a browser, point to http://localhost:29082/adminCenter/
 
-管理者 password
-utle   utle
+```
+userid  password 
+------------------
+管理者    password
+utle     utle
+```
+
+### Debugging 
 
 Debug - bootstrap.propertis
 JVM   - UTF-8 option is important
