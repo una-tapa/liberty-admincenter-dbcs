@@ -46,3 +46,7 @@ utle     utle
 Debug - bootstrap.propertis
 JVM   - UTF-8 option is important
 serve.xml - basic auth and admincenter
+
+### Reference
+The property has been documented. 
+https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_ui_setup.html
